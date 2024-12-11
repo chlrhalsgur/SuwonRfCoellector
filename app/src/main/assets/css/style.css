@@ -1,0 +1,130 @@
+#mask {
+    opacity:0;
+    position:absolute;
+    z-index:3;
+    left:0px;
+    top:50px;
+}
+#location_area {
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#circle{
+    border-radius: 100%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 4.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        /*background-color: #ec407a;*/
+    }
+}
+
+html, body {
+    margin: 0;
+    width: 200%;
+    height: 200%;
+}
+
+#dotContainer {
+    position: relative;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+    width: 400px;
+    left: -1000px;
+    top: -1000px;
+    transition: left 0.5s ease, top 0.5s ease;
+}
+
+#dot {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+    width: 400px;
+    transition: left 0.5s ease, top 0.5s ease;
+}
+
+#arrow {
+    position: absolute;
+    z-index: 2;
+    display:block;
+    pointer-events: none;
+    width: 400px;
+    transition: transform 0.5s ease;
+    transform-origin : center;
+    transform : rotate(90deg);
+}
+
+#X {
+    position: absolute;
+    z-index: 3;
+    left: -1000px;
+    top: -1000px;
+    display:block;
+    pointer-events: none;
+    content: url("../images/X.png");
+    width: 12px;
+    transform: rotate(180deg);
+}
+
+canvas {
+    transform: rotate(90deg);
+}
+#map_area {
+    position: absolute;
+    z-index: 1;
+}
+
+#dotContainer {
+    position: relative;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+    transition: left 0.5s ease, top 0.5s ease;
+}
+
+#small_arrow, #small_dot, #X, #big_arrow, #big_dot {
+    position: absolute;
+}
+
+#small_arrow, #big_arrow {
+    z-index: 1;
+    display:none;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+    transform-origin : center;
+}
+
+#small_dot, #big_dot {
+    z-index: 2;
+    display:none;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+#X {
+    z-index: 3;
+    display:none;
+    pointer-events: none;
+    transform: rotate(180deg);
+}
+
+#box {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    background-color: rgba(135, 206, 235, 0.3)
+}
